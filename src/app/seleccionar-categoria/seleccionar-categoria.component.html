@@ -1,0 +1,19 @@
+<div class="container ">  
+    <app-titulos  [titulo]="titulo"></app-titulos>   
+
+    <div class="row mt-5">
+        <div class="col-4" *ngFor="let item of categoriasTurnos" > 
+            <div 
+                class="card shadow-lg p-3 bg-white rounded" 
+                style="width: 20rem; height: 20rem;cursor: pointer;" 
+                (click)="seleccionarCategoria(item.id)">
+                <i class="fa {{item.icon}}" style="font-size: 150px;padding-left: 60px; padding-top: 50px"></i>
+                <div class="card-body ">
+                <p class="card-text" style="font-size: 30px; width: 100%; text-align: center;">{{item.nombre}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
